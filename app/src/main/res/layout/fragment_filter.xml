@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spSortOrder"
+        android:layout_alignTop="@+id/tvSort"
+        android:layout_alignRight="@+id/etBeginDate"
+        android:layout_alignEnd="@+id/etBeginDate"
+        tools:ignore="RtlHardcoded"
+        android:layout_toRightOf="@+id/tvNewsDesk"
+        android:layout_toEndOf="@+id/tvNewsDesk"
+        android:entries="@array/sort_order_array"/>
+
+
+    <CheckBox
+        android:text="@string/arts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbArts"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_alignTop="@+id/tvNewsDesk"
+        android:layout_toRightOf="@+id/tvNewsDesk"
+        android:layout_toEndOf="@+id/tvNewsDesk"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+
+    <TextView
+        android:text="@string/begin_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:id="@+id/beginDate"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etBeginDate"
+        tools:ignore="RelativeOverlap"
+        android:layout_alignBaseline="@+id/beginDate"
+        android:layout_alignBottom="@+id/beginDate"
+        android:layout_toEndOf="@+id/tvNewsDesk"
+        android:layout_toRightOf="@+id/tvNewsDesk" />
+
+    <CheckBox
+        android:text="@string/sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbSports"
+        android:layout_below="@+id/cbFashion"
+        android:layout_alignLeft="@+id/cbFashion"
+        android:layout_alignStart="@+id/cbFashion"
+        android:layout_marginTop="11dp"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+
+    <CheckBox
+        android:text="@string/fashion_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbFashion"
+        android:layout_below="@+id/cbArts"
+        android:layout_alignLeft="@+id/cbArts"
+        android:layout_alignStart="@+id/cbArts"
+        android:layout_marginTop="11dp"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+
+    <TextView
+        android:text="@string/news_desk_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:id="@+id/tvNewsDesk"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded"
+        android:layout_below="@+id/spSortOrder"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/sort_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:id="@+id/tvSort"
+        android:textSize="18sp"
+        android:layout_below="@+id/etBeginDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSave"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_below="@+id/cbSports"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+</RelativeLayout>
